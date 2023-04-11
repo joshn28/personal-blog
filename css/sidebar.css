@@ -1,0 +1,17 @@
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sidebar > * {
+    margin: 20px 0;
+}
+
+.sidebar-headings {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.sidebar-links > a {
+    display: flex;
+    flex-direction: column;
+}

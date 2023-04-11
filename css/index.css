@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;700;900&display=swap);
+@import url(./card.css);
+@import url(./blog-post.css);
+@import url(./sidebar.css);
+
+* {
+    --link-color: #00adb5;
+    --text-color: #eee;
+    --card-color: #393e46;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #222831;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+.title {
+    margin: 10px 0 0 10px;
+    font-size: 40px;
+    color: var(--text-color);
+}
+
+.blog-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.blog-links > a {
+    margin-bottom: 10px;
+}
+
+.blog-btns {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-left: 10px;
+}
+
+.blog-btns > button {
+    padding: 5px 20px;
+    font-weight: bold;
+    background: none;
+    border: solid var(--link-color) 2px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.follow-btn {
+    margin-bottom: 10px;
+}
+
+.follow-btn,
+.subscribe-btn {
+    color: var(--link-color);
+}
+
+.follow-btn:hover,
+.subscribe-btn:hover {
+    background-color: var(--text-color);
+}
+
+.container {
+    display: grid;
+    width: auto;
+    margin-top: 30px;
+    grid-template-columns: 200px 1fr;
+}
+
+.posts {
+    display: flex;
+    gap: 50px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    color: var(--font-color);
+    background-color: var(--card-color);
+    grid-area: footer;
+    border-radius: 5px;
+    padding-top: 10px;
+    color: var(--text-color);
+}
+
+footer > p {
+    margin: 0 0 0 5px;
+}
+
+@media(max-width: 1200px) {
+    .container,
+    .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .container {
+        padding-bottom: 100px;
+        position: relative;
+    }
+
+    .posts {
+        align-items: center;
+    }
+
+    .card {
+        width: min(70%, 600px);
+    }
+
+    .card-img > img {
+        width: 100%;
+    }
+}
+
+@media(max-width: 900px) {
+    .blog-post {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+}
