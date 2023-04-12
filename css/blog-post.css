@@ -47,6 +47,9 @@ aside {
     grid-area: image;
     width: 48px;
     height: 48px;
+    background-color: var(--text-color);
+    padding: 10px;
+    border-radius: 50%;
     margin-right: 10px;
 }
 
@@ -66,6 +69,10 @@ aside {
 }
 
 .author-company {
+    font-size: 12px;
+}
+
+.author-title {
     font-size: 12px;
 }
 
